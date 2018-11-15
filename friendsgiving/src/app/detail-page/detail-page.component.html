@@ -1,0 +1,23 @@
+<div class="invitedBroadBackground">
+  <div class="invitedBackground">
+    <h1>Hello {{participantName}}, welcome to</h1>
+    <!--h3 class="mainIntro">Here are the details for </h3-->
+    <h2 class="mainTitle">Friendsgiving 2018</h2>
+    <h3 class="label">Cooking and drinking will start</h3>
+    <h5 class="detail">Friday, November 16 at 5:00pm </h5>
+    <h3 class="label">All inclusive cost</h3>
+    <h5 class="detail">Less than $20 (you will get a formal cost later)</h5>
+    <h3 class="label">Attire</h3>
+    <h5 class="detail">We request a cocktail casual wardrobe</h5>
+    <h3 class="label">Location</h3>
+    <h5 class="detail">Chad and Simon's apartment</h5>
+
+    <h3 class="label">Would you like to RSVP?</h3>
+    <!--<mat-form-field class="example-full-width">-->
+    <!--<textarea matInput placeholder="Please write a short bio"></textarea>-->
+    <!--</mat-form-field>-->
+    <mat-checkbox class="checkbox" required="true" [(ngModel)]="checked"><span class="detail">Do you agree to the above terms?</span></mat-checkbox>
+    <button class="RSVPButton" type="submit" [disabled]="!checked" (click)="rsvpPressed()" mat-stroked-button>RSVP</button>
+    <!--a href="mailto:Eryka.Adams@Clickdimensions.com?bcc=julie.patrick@clickdimensions.com&subject=RSVP%20for%20New%20Year's%20Eve%20Party%20&body=Hi%20Bob,%0d%0dI%20would%20like%20to%20RSVP%20to%20your%20party%20invitation.%20Here%20are%20my%20details:%0d%0dName:%20Eryka%20Adams%0dNumber%20of%20Guest:%0d" rel="EMAIL">here</a-->
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="invitedBroadBackground">
+  <div class="invitedBackground">
+    <h3 class="thankYou">Thank you, {{participantName}}</h3>
+    <h4 class="foodText">You will be in charge of {{specificParticipantDetails.food}}</h4>
+    <h6 class="instructionText">To officially RSVP we will need a few more details of you, a short bio, and an attractive photo of you.</h6>
+
+
+    <form class="challenge-form" autocomplete="off" id="search-form" >
+      <mat-checkbox [(ngModel)]="needsIngredients" [ngModelOptions]="{standalone: true}">Please check if you need us to pick up any ingredients for your dish</mat-checkbox>
+      <mat-form-field class="ingredientsInput">
+        <textarea matInput [(ngModel)] = "specificParticipantDetails.ingredientsNeeded" [ngModelOptions]="{standalone: true}" [disabled]="!needsIngredients" placeholder="Tell us the ingredients you will need"></textarea>
+      </mat-form-field>
+      <mat-form-field class="wineInput">
+        <textarea matInput #wineInput [(ngModel)] = "specificParticipantDetails.wine" [ngModelOptions]="{standalone: true}" placeholder="Please tell us of any drink requests"></textarea>
+      </mat-form-field>
+      <mat-form-field class="bioInput">
+        <textarea matInput #biography required placeholder="Please write a short bio"></textarea>
+      </mat-form-field>
+      <mat-form-field class="emailInput">
+        <textarea type="email" matInput #email required placeholder="Please enter your email"></textarea>
+      </mat-form-field>
+
+      <h6 class="photoInstructionText">Please attach your photo to the email that will appear.</h6>
+      <button type="submit" [disabled]="!(email.value && biography.value)" mat-stroked-button><a class="nostyle" style="cursor: pointer" href="mailto:chad.brokaw@colorado.edu?cc=conner.sinjem@colorado.edu,{{email.value}}&subject=I'm RSVP'ing for Friendsgiving 2018&body=Hello, %0D %0D I am formally RSVP'ing for Friendsgiving which starts at 5:00pm. I will be there the whole time. %0D %0D The location is Chad and Simon's apartment. %0D %0D Here is my bio: %0D {{biography.value}}. %0D %0D Here is my photo: %0D %0D {{(specificParticipantDetails.ingredientsNeeded ? (specificParticipantDetails.ingredientsNeeded) : emptyString)}} %0D %0D Here is the itinerary: %0D Arrive no later than 5:00 pm for a selection of cocktails and casual chitchat while cooking commences %0D 6:30pm Dinner will be served with a pre-dinner shot, followed by the ceremonial opening of the wine. As is tradition %0D 8:30pm Dessert will be served and a hiatus from drinking will be observed to appreciate the meal. %0D 9:00pm Departure for Conner’s locale where binge drinking will commence and tea shall be spilt %0D %0D  Love, %0D %0D %09 {{participantName}}">Submit</a></button>
+    </form>
+  </div>
+</div>

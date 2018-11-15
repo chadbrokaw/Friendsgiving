@@ -1,0 +1,75 @@
+.invitedBroadBackground {
+  background-color: #EFE4D2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  .invitedBackground {
+    width: 90%;
+    height: 90%;
+    outline: 2px solid #BB9147;
+    outline-offset: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-family: "Helvetica Neue", sans-serif;
+      font-weight: normal;
+      margin: .5em 0em 0em 0em;
+      font-size: 5em;
+      color: rgba(0, 0, 0, 0.88);;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 3em;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.88);;
+      margin: .5em 0em 0em 0em;
+    }
+    h4 {
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 1.25em;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.88);;
+      margin: .5em 0em .5em 0em;
+    }
+    .challenge-form {
+      margin: 1em 0 0 0;
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .challenge-full-width {
+      width: 100%;
+    }
+    #search-form {
+      .mat-form-field-underline {
+        background-color: green;
+      }
+      .mat-form-field-ripple {
+        background-color: red;
+      }
+      .placeholder {
+        display: none;
+      }
+    }
+    .example-section {
+      display: flex;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 60px;
+    }
+    .example-margin {
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.invitedBroadBackground {
+  background-color: #EFE4D2;
+  width: 100%;
+  height: 125%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  .invitedBackground {
+    width: 90%;
+    height: 90%;
+    outline: 2px solid #BB9147;
+    outline-offset: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .thankYou {
+      color: rgba(0, 0, 0, 0.88);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 2em;
+      font-weight: 300;
+      margin: 1em 0 -.2em 0;
+    }
+    .instructionText {
+      color: rgba(0, 0, 0, 0.88);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: .8em;
+      font-weight: normal;
+      font-style: italic;
+    }
+    .photoInstructionText {
+      color: rgba(0, 0, 0, 0.88);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: .8em;
+      font-weight: normal;
+    }
+    .foodText {
+      color: rgba(0, 0, 0, 0.88);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: normal;
+    }
+    .bioInput {
+      width: 500px;
+    }
+    .wineInput {
+      width: 500px;
+    }
+    .ingredientsInput {
+      width: 500px;
+    }
+    .emailInput {
+      width: 500px;
+    }
+    .challenge-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

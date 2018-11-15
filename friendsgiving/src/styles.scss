@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-primary: (
+  50 : #f9ebe4,
+  100 : #f1cdbd,
+  200 : #e7ac91,
+  300 : #dd8b64,
+  400 : #d67243,
+  500 : #cf5922,
+  600 : #ca511e,
+  700 : #c34819,
+  800 : #bd3e14,
+  900 : #b22e0c,
+  A100 : #ffe4df,
+  A200 : #ffb9ac,
+  A400 : #ff8f79,
+  A700 : #ff795f,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-secondary: (
+  50 : #f1ece5,
+  100 : #ddd0be,
+  200 : #c6b092,
+  300 : #af9066,
+  400 : #9d7946,
+  500 : #8c6125,
+  600 : #845921,
+  700 : #794f1b,
+  800 : #6f4516,
+  900 : #5c330d,
+  A100 : #ffc191,
+  A200 : #ffa45e,
+  A400 : #ff882b,
+  A700 : #ff7912,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$mat-cabintripaccent: (
+  50 : #e5f4f3,
+  100 : #bee4e1,
+  200 : #93d3cd,
+  300 : #67c1b8,
+  400 : #47b3a9,
+  500 : #26a69a,
+  600 : #229e92,
+  700 : #1c9588,
+  800 : #178b7e,
+  900 : #0d7b6c,
+  A100 : #adfff3,
+  A200 : #7affec,
+  A400 : #47ffe4,
+  A700 : #2dffe0,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$mat-cabintripwarn: (
+  50 : #f8e2f1,
+  100 : #eeb8db,
+  200 : #e288c4,
+  300 : #d658ac,
+  400 : #ce359a,
+  500 : #c51188,
+  600 : #bf0f80,
+  700 : #b80c75,
+  800 : #b00a6b,
+  900 : #a30558,
+  A100 : #ffcfe5,
+  A200 : #ff9cca,
+  A400 : #ff69af,
+  A700 : #ff4fa2,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+$accent:  mat-palette($mat-cabintripaccent, 600, 100, 800);
+$warn:    mat-palette($mat-cabintripwarn, 600);
+$secondary: mat-palette($md-secondary, 800);
+$primary: mat-palette($md-primary, 800);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
